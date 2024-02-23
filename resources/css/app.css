@@ -1,0 +1,118 @@
+/* resources/css/app.css */
+
+/* Общие стили */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Стили для верхней строки */
+.top-row {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+/* Стили для светофора */
+#traffic-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #718096;
+}
+
+.light-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.light {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.light.active {
+    box-shadow: 0 0 10px 5px;
+}
+
+#red.active {
+    box-shadow: 0 0 10px 5px #CC0000;
+}
+
+#yellow.active {
+    box-shadow: 0 0 10px 5px #FFFF00;
+}
+
+#green.active {
+    box-shadow: 0 0 10px 5px #339933;
+}
+
+#red {
+    background-color: #CC0000	;
+}
+
+#yellow {
+    background-color: #FFFF00;
+}
+
+#green {
+    background-color: #339933;
+}
+
+/* Стили для кнопки */
+.button-container {
+    align-content: center;
+}
+
+#forward-button {
+    width: 120px;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    color: ghostwhite;
+    background-color: rgba(21, 62, 89, 0.27);
+    font-size: 26px;
+
+}
+#forward-button:hover {
+    background-color: rgba(21, 62, 89, 0.58);
+    cursor: pointer;
+}
+
+/* Стили для таблицы с логами */
+.log-table-container {
+    width: 80%;
+    margin-top: 20px;
+}
+
+#log-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#log-table th, #log-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+#log-table th {
+    background-color: lightgray;
+}
+
+#log-table tbody tr:nth-child(even) {
+    background-color: #e8e8e8;
+}

@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
 
 class  CorsMiddleware
 {
@@ -13,10 +14,10 @@ class  CorsMiddleware
      *
      * @param Request $request
      * @param Closure $next
-     * @return mixed
+     * @return Response|JsonResponse
      *
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next): Response|JsonResponse
     {
         return $next($request)
             ->header('Access-Control-Allow-Origin', '*')
